@@ -67,7 +67,7 @@ $('#name').focus(function() {
     $('#success').html('');
 });
 
-var myform = $("form#myform");
+var myform = $("formcmyform");
 myform.submit(function(event){
 	event.preventDefault();
 
