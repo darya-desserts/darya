@@ -64,25 +64,5 @@ $(function() {
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
-    $('#success').html('index');
-});
-
-var myform = $("contactForm");
-myform.submit(function(event){
-	event.preventDefault();
-
-  // Change to your service ID, or keep using the default service
-  var service_id = "default_service";
-  var template_id = "template_darya";
-
-  myform.find("button").text("Sending...");
-  emailjs.sendForm(service_id,template_id,myform[0])
-  	.then(function(){
-    	alert("Sent!");
-       myform.find("button").text("Send");
-    }, function(err) {
-       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("button").text("Send");
-    });
-  return false;
+    $('#success').html('');
 });
